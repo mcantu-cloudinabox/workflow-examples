@@ -16,7 +16,7 @@ jobs:
     name: permission check
     runs-on: ubuntu-latest
     if: |
-      github.actor != 'kingthorin'
+      github.actor != 'mcantu'
     steps:
     - name: check permission
       run: echo permission pass
