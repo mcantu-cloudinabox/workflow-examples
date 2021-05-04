@@ -12,16 +12,10 @@ on:
         default: 'The Octoverse'
 
 jobs:
-  permission:
-    name: permission check
+  say_hello:
     runs-on: ubuntu-latest
     if: |
       github.actor != 'mcantu'
-    steps:
-    - name: check permission
-      run: echo permission pass
-  say_hello:
-    runs-on: ubuntu-latest
     steps:
     - run: |
         echo "Hello ${{ github.event.inputs.name }}!"
