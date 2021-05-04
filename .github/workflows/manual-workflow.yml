@@ -16,7 +16,7 @@ jobs:
     name: permission check
     runs-on: ubuntu-latest
     if: |
-      contains('["mcantu","james-leha"]', github.actor)
+      contains('["mcantu-dev","james-leha"]', github.actor)
     steps:
     - name: check permission
       run: echo permission pass
