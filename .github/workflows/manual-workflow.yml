@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
     inputs:
       name:
+      if: |
+        contains('["mcantu","james-leha"]', github.actor)
         description: 'Person to greet'
         required: true
         default: 'Mona the Octocat'
