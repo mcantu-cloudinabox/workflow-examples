@@ -3,8 +3,6 @@ on:
   workflow_dispatch:
     inputs:
       name:
-      if: |
-        contains('["mcantu","james-leha"]', github.actor)
         description: 'Person to greet'
         required: true
         default: 'Mona the Octocat'
@@ -14,6 +12,14 @@ on:
         default: 'The Octoverse'
 
 jobs:
+  permission:
+    name: permission check
+    runs-on: ubuntu-latest
+    if: |
+      contains('["mcantu","james-leha"]', github.actor)
+    steps:
+    - name: check permission
+      run: echo permission pass
   say_hello:
     runs-on: ubuntu-latest
     steps:
